@@ -12,7 +12,6 @@ This is a D client library for the Diffbot API (http://www.diffbot.com/products/
 
 	src/ - The source files
 
-	src/model/response/article.d - data model for article responses 
 	src/model/exception.d - exceptions are defined here
 
 	src/controller/diffbot.d - main class
@@ -28,14 +27,14 @@ This is a D client library for the Diffbot API (http://www.diffbot.com/products/
 
 		You can get a new instance of a DiffBot class by calling:
 
-			auto diffbot = new DiffBot(token,url);
+			auto diffbot = new DiffBot("0123456789ABCDEF","http://www.nytimes.com");
 
 		Or you can just call the standard constructor with no parameters at all and set the class properties:
 
 			auto diffbot = new DiffBot;
 
 			diffbot.token = "0123456789ABCDEF";
-			diffbot.url = "http://www.nytimes.com";
+			diffbot.url.target = "http://www.nytimes.com";
 
 
 	2.2 Additional Parameters
@@ -125,6 +124,3 @@ This is a D client library for the Diffbot API (http://www.diffbot.com/products/
 
 
 Diffbot D client library was happily written by Daniel Vieira <daniel@fablefactory.com.br>
-
-The author accepts donations to support his work on this and many other projects. 
-If you want to support, please contact him.
